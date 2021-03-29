@@ -1,0 +1,72 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: background-slide 3s ease-in-out;
+  animation: background-slide 3s ease-in-out;
+  background: $background-color;
+
+  .letter {
+    display: inline-block;
+    -webkit-animation: loading 1s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+    animation: loading 1s cubic-bezier(0.8, 0.5, 0.2, 1.4) infinite;
+    transform-origin: bottom center;
+    position: relative;
+    padding: 0 10px;
+    opacity: 0;
+    top: 25vh;
+  }
+
+  .letter:nth-child(1) {
+    animation-delay: 0.1s;
+    color: $primary-color;
+  }
+  .letter:nth-child(2) {
+    animation-delay: 0.2s;
+    color: $secondary-color;
+  }
+  .letter:nth-child(3) {
+    animation-delay: 0.3s;
+    color: $third-color;
+  }
+  .letter:nth-child(4) {
+    animation-delay: 0.4s;
+    color: $primary-color;
+  }
+  .letter:nth-child(5) {
+    animation-delay: 0.5s;
+    color: $secondary-color;
+  }
+  .letter:nth-child(6) {
+    animation-delay: 0.6s;
+    color: $third-color;
+  }
+  .letter:nth-child(7) {
+    animation-delay: 0.7s;
+    color: $primary-color;
+  }
+  .letter:nth-child(8) {
+    animation-delay: 0.8s;
+    color: $secondary-color;
+  }
+  .letter:nth-child(9) {
+    animation-delay: 0.9s;
+    color: $third-color;
+  }
+}
+
+//Media queries
+@media #{$desktop-2000} {
+  .loader .letter {
+    font-size: $texte-size-2k;
+  }
+}
+
+@media #{$tablet-1000} {
+  .loader .letter {
+    top: 45vh;
+  }
+}

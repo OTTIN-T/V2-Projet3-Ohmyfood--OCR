@@ -1,0 +1,410 @@
+/**
+ * ----------------------------------------
+ * animation background-slide
+ * ----------------------------------------
+ */
+@-webkit-keyframes background-slide {
+  0%,
+  90% {
+    -webkit-transform: translateX(0%);
+    z-index: 99;
+    cursor: wait;
+    display: flex;
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+    z-index: -1;
+    cursor: initial;
+    display: none;
+  }
+}
+@keyframes background-slide {
+  0%,
+  90% {
+    transform: translateX(0%);
+    z-index: 99;
+    cursor: wait;
+    display: flex;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    z-index: -1;
+    display: none;
+    cursor: initial;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation anim-heart
+ * ----------------------------------------
+ */
+@-webkit-keyframes anim-heart {
+  0% {
+    background-image: linear-gradient(white 100%);
+  }
+  10% {
+    background-image: linear-gradient(
+      white 90%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  20% {
+    background-image: linear-gradient(
+      white 80%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  30% {
+    background-image: linear-gradient(
+      white 70%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  40% {
+    background-image: linear-gradient(
+      white 60%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      white 50%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  60% {
+    background-image: linear-gradient(
+      white 40%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  70% {
+    background-image: linear-gradient(
+      white 30%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  80% {
+    background-image: linear-gradient(
+      white 20%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  90% {
+    background-image: linear-gradient(
+      white 10%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  100% {
+    background-image: linear-gradient($secondary-color, $primary-color);
+  }
+}
+@keyframes anim-heart {
+  0% {
+    background-image: linear-gradient(white 100%);
+  }
+  10% {
+    background-image: linear-gradient(
+      white 90%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  20% {
+    background-image: linear-gradient(
+      white 80%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  30% {
+    background-image: linear-gradient(
+      white 70%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  40% {
+    background-image: linear-gradient(
+      white 60%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      white 50%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  60% {
+    background-image: linear-gradient(
+      white 40%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  70% {
+    background-image: linear-gradient(
+      white 30%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  80% {
+    background-image: linear-gradient(
+      white 20%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  90% {
+    background-image: linear-gradient(
+      white 10%,
+      $secondary-color,
+      $primary-color
+    );
+  }
+  100% {
+    background-image: linear-gradient($secondary-color, $primary-color);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation button-background
+ * ----------------------------------------
+ */
+@-webkit-keyframes button-background {
+  0%,
+  20%,
+  40%,
+  70%,
+  90% {
+    background: linear-gradient(180deg, $secondary-color, $primary-color);
+  }
+  5%,
+  15%,
+  45%,
+  75%,
+  85% {
+    background: linear-gradient(179.5deg, $secondary-color, $primary-color);
+  }
+  10%,
+  50%,
+  80% {
+    background: linear-gradient(179deg, $secondary-color, $primary-color);
+  }
+  25%,
+  35%,
+  55%,
+  65%,
+  95% {
+    background: linear-gradient(180.5deg, $secondary-color, $primary-color);
+  }
+  30%,
+  60%,
+  100% {
+    background: linear-gradient(181deg, $secondary-color, $primary-color);
+  }
+}
+@keyframes button-background {
+  0%,
+  20%,
+  40%,
+  70%,
+  90% {
+    background: linear-gradient(180deg, $secondary-color, $primary-color);
+  }
+  5%,
+  15%,
+  45%,
+  75%,
+  85% {
+    background: linear-gradient(179.5deg, $secondary-color, $primary-color);
+  }
+  10%,
+  50%,
+  80% {
+    background: linear-gradient(179deg, $secondary-color, $primary-color);
+  }
+  25%,
+  35%,
+  55%,
+  65%,
+  95% {
+    background: linear-gradient(180.5deg, $secondary-color, $primary-color);
+  }
+  30%,
+  60%,
+  100% {
+    background: linear-gradient(181deg, $secondary-color, $primary-color);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation menu-slide-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes menu-slide-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes menu-slide-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation menu-slide-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes menu-slide-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes menu-slide-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation menu-slide-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes menu-slide-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes menu-slide-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation list-scale
+ * ----------------------------------------
+ */
+@-webkit-keyframes list-scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes list-scale {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation loading
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

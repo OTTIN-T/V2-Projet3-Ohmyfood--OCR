@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "V2 du Projet 3 de la formation développeur web OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./sass/css/style.css --style compressed",
+    "prefix": "postcss ./sass/css/style.css --use autoprefixer -d ./sass/css/prefixed/"
+  },
+  "author": "Timothé Ottin",
+  "license": "ISC"
+}

@@ -1,0 +1,99 @@
+footer {
+  background-color: darken($background-color, 75%);
+
+  nav {
+    margin: 0 10%;
+    padding: 1% 0;
+
+    h2 {
+      font-family: "Shrikhand", Helvetica, Arial, sans-serif, cursive;
+      color: $other-color;
+      font-weight: 100;
+      margin: 1% 0;
+      text-align: left;
+    }
+
+    ul {
+      li {
+        padding: 1% 0;
+
+        a,
+        i {
+          color: $other-color;
+        }
+
+        a:hover {
+          i {
+            background-clip: text; //Non pris en charge par W3C
+            -webkit-background-clip: text;
+            animation: anim-heart 0.2s both;
+            -webkit-animation: anim-heart 0.2s both;
+            transition: all 0.5 ease-in-out;
+            opacity: 1;
+            color: transparent;
+            z-index: 4;
+          }
+        }
+      }
+
+      li:first-child {
+        i {
+          margin-right: 2%;
+        }
+      }
+
+      li:nth-child(2) {
+        i {
+          margin-right: 1.5%;
+        }
+      }
+    }
+  }
+}
+
+// Media queries
+@media #{$desktop-2000} {
+  footer {
+    nav {
+      margin: 0 5%;
+      padding: 1% 0;
+
+      ul {
+        li {
+          padding: 1% 0;
+          font-size: $texte-size-2k;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-1000} {
+  footer nav {
+    margin: 0 auto;
+    width: 450px;
+
+    ul {
+      padding-bottom: 2%;
+
+      li:first-child {
+        i {
+          margin-right: 20px;
+        }
+      }
+
+      li:nth-child(2) {
+        i {
+          margin-right: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$mobile-500} {
+  footer nav {
+    width: 276px;
+    padding: 5% 0;
+  }
+}

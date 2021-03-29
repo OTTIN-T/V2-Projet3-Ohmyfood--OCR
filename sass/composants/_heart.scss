@@ -1,0 +1,70 @@
+// Boutons des coeurs
+#heart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+  margin-bottom: -15px;
+
+  .regular {
+    position: relative;
+    z-index: 4;
+    font-size: 18px;
+    color: black;
+
+    &:hover {
+      z-index: 3;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    .solid {
+      cursor: pointer;
+      -webkit-animation: anim-heart 0.2s both;
+      animation: anim-heart 0.2s both;
+      transition: all 0.1s ease-in-out;
+      opacity: 1;
+      color: transparent;
+      z-index: 4;
+    }
+  }
+
+  .solid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index: 3;
+    font-size: 20px;
+    color: $background-color;
+    background-clip: text; //Non pris en charge par W3C
+    -webkit-background-clip: text;
+  }
+}
+
+// Media Queries
+@media #{$desktop-2000} {
+  #heart {
+    .regular {
+      font-size: 30px;
+    }
+
+    .solid {
+      height: 45px;
+      width: 45px;
+      font-size: 33px;
+    }
+  }
+}
+
+@media #{$mobile-500} {
+  #heart {
+    .solid {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

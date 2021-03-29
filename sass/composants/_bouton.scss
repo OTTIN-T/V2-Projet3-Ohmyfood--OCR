@@ -1,0 +1,31 @@
+//Bouton classique
+button {
+  padding: 14px 17px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, $secondary-color, $primary-color);
+  border: none;
+  color: $other-color;
+  box-shadow: 0px 4px 7px 1px darken($background-color, 20%);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 7px 1px darken($background-color, 50%);
+    -webkit-animation: button-background 6s linear infinite alternate both;
+    animation: button-background 6s linear infinite alternate both;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Media Queries
+@media #{$desktop-2000} {
+  #header-main {
+    button {
+      font-size: $title-size;
+    }
+  }
+}

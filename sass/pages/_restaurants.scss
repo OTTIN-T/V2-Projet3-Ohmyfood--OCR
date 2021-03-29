@@ -1,0 +1,301 @@
+* {
+  font-family: "Roboto", Helvetica, Arial, sans-serif, cursive;
+}
+
+#header-img {
+  position: relative;
+  z-index: 1;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 60%;
+  }
+}
+
+#menu {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+  padding: 30px 0 50px 0;
+  background-color: $background-color;
+  border-radius: 30px;
+
+  #header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+
+    h1 {
+      font-family: "Shrikhand", Helvetica, Arial, sans-serif, cursive;
+    }
+
+    #heart {
+      .regular {
+        left: 20px;
+      }
+
+      .solid {
+        right: 3.5px;
+        top: 0.8px;
+      }
+    }
+  }
+
+  #container-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    h2 {
+      width: 50px;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: $texte-size-mobile;
+      border-bottom: 2px solid $third-color;
+    }
+
+    #starters {
+      -webkit-animation: menu-slide-left 3.8s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: menu-slide-left 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    #dishes {
+      -webkit-animation: menu-slide-bottom 3.8s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: menu-slide-bottom 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+    }
+
+    #desserts {
+      -webkit-animation: menu-slide-right 3.8s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: menu-slide-right 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    h2 ~ div {
+      width: 350px;
+      background: #f6f6f6;
+      margin: 20px 0;
+      padding: 10px 10px 0px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 5px 4px darken($background-color, 5%);
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 5px 4px darken($background-color, 10%);
+
+        .check-background {
+          transform: translateX(-50px);
+        }
+
+        .fa-check-circle {
+          transform: rotate(360deg);
+        }
+
+        h3,
+        p {
+          padding-right: 50px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        span {
+          transform: translateX(-40px);
+        }
+      }
+
+      h3,
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 85%;
+        transition: all 0.4s ease-in-out;
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: $texte-size-mobile;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      span {
+        display: flex;
+        justify-content: flex-end;
+        width: 95%;
+        margin-top: -16px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .check-background {
+        display: flex;
+        justify-content: center;
+        background-color: $third-color;
+        width: 50px;
+        height: 55px;
+        align-items: center;
+        margin: -45px 0 0 340px;
+        border-radius: 0 15px 15px 0;
+        transition: all 0.3s ease-in-out;
+
+        .fa-check-circle {
+          color: $other-color;
+          transition: all 0.4s ease-out;
+        }
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 14px 40px;
+  }
+}
+
+//Media queries
+@media #{$desktop-2000} {
+  #header-img {
+    height: 450px;
+  }
+
+  #menu {
+    #header-menu {
+      width: 81%;
+
+      #heart {
+        .solid {
+          right: 16.5px;
+          top: 1.8px;
+        }
+      }
+    }
+
+    #container-menu {
+      h2 {
+        font-size: $title-size-2k;
+      }
+
+      h2 ~ div {
+        width: 550px;
+        padding: 20px 20px 0px;
+        margin: 70px 0;
+
+        &:hover {
+          .check-background {
+            transform: translateX(-70px);
+          }
+        }
+
+        h3,
+        p,
+        span {
+          font-size: $title-size;
+        }
+
+        span {
+          margin-top: -28px;
+        }
+
+        .check-background {
+          width: 70px;
+          height: 105px;
+          margin: -81px 0 0 530px;
+
+          .fa-check-circle {
+            font-size: $title-size;
+          }
+        }
+      }
+    }
+
+    button {
+      padding: 24px 80px;
+      border-radius: 35px;
+      font-size: 25px;
+    }
+  }
+}
+
+@media #{$desktop-1500} {
+  #header-img {
+    height: 250px;
+  }
+
+  #menu {
+    #container-menu {
+      h2 ~ div {
+        width: 280px;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .check-background {
+          margin: -45px 0 0 270px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-1000} {
+  #menu {
+    #container-menu {
+      #starters {
+        -webkit-animation: menu-slide-left 3.5s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: menu-slide-left 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+      }
+
+      #dishes {
+        -webkit-animation: menu-slide-left 4s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: menu-slide-left 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      #desserts {
+        -webkit-animation: menu-slide-left 4.5s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: menu-slide-left 4.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+      }
+    }
+
+    #header-menu {
+      #heart {
+        .solid {
+          top: 0.5px;
+          right: 4px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$mobile-500} {
+  #menu #header-menu #heart .solid {
+    top: 1.5px;
+  }
+}
